@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // print length Of Array
+        var arr=[1,2,3,4,5,6,7,8,9]
+        console.log("Length Of Array is : "+arr.length)
+
+        function arrayLength(value){
+            let a1=value
+            console.log(a1.lenth)
+        }
+        
+        // print Array in reverse// 
+        let arr1=[1,1,2,3,4,2,42]
+        console.log(arr1)
+        console.log(arr1.reverse())
+        console.log(arr1)
+
+        // console.log(arr1.slice(0,-1))
+
+        // create and array & remove the duplicate value
+        let array=[1,2,3,55,642,1,3,1,22,1]
+        //  array.filter((value,index)=>array.indexOf(value)===index);
+        console.log(array.filter((value,index)=>array.indexOf(value)===index))
+
+        // create and array and find max value in array
+        console.log(Math.max(...array))
+        console.log(Math.min(...array))
+
+        // find index of value
+        console.log(array.indexOf(642))
+        console.log(arr1[2])    </script>
+</body>
+</html>

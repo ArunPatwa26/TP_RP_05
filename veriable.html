@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 200px 0px;
+}
+.box input[type=text]{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+::placeholder{
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: 160px;
+    /* margin: 340px 0px; */
+}
+#celcius{
+    margin: 0px 69px;
+    /* border: 2px solid black; */
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    padding: 11px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    border-radius: 11px 105px;
+}
+</style>
+</head>
+
+<body>
+    <div class="box">
+
+        
+            <!-- <input type="text" placeholder="Enter fernite Number" id="fernite"> -->
+            <span id="celcius"></span>
+        
+    </div>
+        <!-- <div class="btn"><button onclick="clickme()">Click here</button></div> -->
+
+    <script>
+        var f=prompt("Enter the ferinite Number")
+        var c=document.getElementById("celcius")
+        c.innerText=(f - 32)/1.8;
+            c.style.border="2px solid black"
+        // function clickme(){
+            // var f=document.getElementById("fernite")
+        //     var c=document.getElementById("celcius")
+        //     c.innerText=(f - 32)/1.8;
+        //     c.style.border="2px solid black"
+
+          
+        //   console.log("Hlo")
+        // }
+        // var ferinite=prompt("Enter fernite Number")
+        // var celcius=(ferinite-38)/1.8
+    </script>
+</body>
+</html>

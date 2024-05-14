@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <style>
+        .box{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 300px;
+            max-height: 1000px;
+            border: 2px solid black;
+            margin: 60px auto;
+            align-items: center;
+            background: #e5c5c5;
+        }
+        .box input[type=text]{
+            position: relative;
+            top: 100px;
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            padding: 0px 10px;
+        }
+        .box button{
+            position: relative;
+            top: 120px;
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        ul li{
+            /* color: black;
+            position: relative;
+            top: 114px;*/
+            font-size: 20px;
+            /* margin: 4px 0px; */ 
+
+        }
+
+        .unorder{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            justify-content: center;
+            text-align: center;
+            margin: 0px auto;
+        }
+        .btn1 {
+        position: relative;
+        left: 97px;
+        bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"  >
+
+        <input type="text" placeholder="Enter fruit Name" id="input">
+        <button onclick="clickMe()" onk>Click Me</button>
+    </div>
+    <div class="unorder">
+
+        <ul id="list">
+            
+        </ul>
+    </div>
+
+    <script>
+        var list=document.getElementById("list")
+        var idcounter=0;
+        
+        function clickMe(){
+            var input1=document.getElementById("input").value
+            // var list=document.createElement("li")
+            // var ul=document.getElementById("list")
+            // list.innerText=input1
+            // ul.appendChild(list)
+            var itemId = "list"+ idcounter++;
+            // list.innerHTML+=`<div style="display:inlxzxesdbn h ine;"><li id="list1" style>${input1}</li > <button class="btn1" onclick="complete()">Complete</button></div>`
+            list.innerHTML+=`<div style="display:inline;"><li id="${itemId}">${input1}</li> <button class="btn1" onclick="completeButton('${itemId}')">Complete</button></div>`
+            }
+     
+        function completeButton(itemId) {
+        var listItem = document.getElementById(itemId); // Get the list item by its id
+        listItem.style.textDecoration = "line-through"; // Apply styling to the list item
+        listItem.style.backgroundColor="red"
+    }
+
+    </script>
+</body>
+</html>

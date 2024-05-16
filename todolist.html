@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task</title>
+    <title>Todo List</title>
     <style>
         .box{
             display: flex;
@@ -18,7 +18,7 @@
         }
         .box input[type=text]{
             position: relative;
-            top: 100px;
+            top: 40px;
             width: 300px;
             height: 30px;
             border-radius: 10px;
@@ -26,7 +26,7 @@
         }
         .box button{
             position: relative;
-            top: 120px;
+            top: 85px;
             width: 100px;
             height: 30px;
             border-radius: 20px;
@@ -48,25 +48,41 @@
             justify-content: center;
             text-align: center;
             margin: 0px auto;
+            font-size: 20px;
+            /* border: 2px solid black; */
+            width: 400px;
+            box-sizing: border-box;
+            padding: 17px 267px 0px 36px;
+            /* background-color: bisque; */
+        }
+        .btn2{
+            position: relative;
+             bottom: 47px;
+            left: 187px;
+            border-radius: 10px;
+            background-color: red;
+            color: white;
         }
         .btn1 {
         position: relative;
         left: 97px;
-        bottom: 20px;
+        bottom: 23px;
+        border-radius: 12px;
+        background-color: yellowgreen;
         }
     </style>
 </head>
 <body>
     <div class="box"  >
-
+        <h1>TODO LIST</h1>
         <input type="text" placeholder="Enter fruit Name" id="input">
         <button onclick="clickMe()" onk>Click Me</button>
     </div>
-    <div class="unorder">
+    <div class="unorder" id="order">
 
-        <ul id="list">
+        <ol id="list">
             
-        </ul>
+        </ol>
     </div>
 
     <script>
@@ -74,21 +90,30 @@
         var idcounter=0;
         
         function clickMe(){
-            var input1=document.getElementById("input").value
-            // var list=document.createElement("li")
-            // var ul=document.getElementById("list")
-            // list.innerText=input1
-            // ul.appendChild(list)
+            var input1=document.getElementById("input")
+            var unorder=document.getElementById("order")
+            unorder.style=" background-color: bisque; border: 2px solid black;";
             var itemId = "list"+ idcounter++;
-            // list.innerHTML+=`<div style="display:inlxzxesdbn h ine;"><li id="list1" style>${input1}</li > <button class="btn1" onclick="complete()">Complete</button></div>`
-            list.innerHTML+=`<div style="display:inline;"><li id="${itemId}">${input1}</li> <button class="btn1" onclick="completeButton('${itemId}')">Complete</button></div>`
-            }
-     
+            list.innerHTML+=`<div style="display:inline;"><li id="${itemId}">${input1.value}</li> <button class="btn1" onclick="completeButton('${itemId}')">Complete</button><button class="btn2" onclick="remove('${itemId}')">Remove</button></div>`
+            input.value='';
+        }
+        
         function completeButton(itemId) {
-        var listItem = document.getElementById(itemId); // Get the list item by its id
-        listItem.style.textDecoration = "line-through"; // Apply styling to the list item
-        listItem.style.backgroundColor="red"
-    }
+            var listItem = document.getElementById(itemId); // Get the list item by its id
+            listItem.style.textDecoration = "line-through"; // Apply styling to the list item
+            listItem.style.backgroundColor="red"
+        }
+        
+        function remove(itemId) {
+    var listItem = document.getElementById(itemId); // Get the list item by its id
+    listItem.parentNode.remove(); // Remove the parent element (which contains the list item and buttons)
+}
+
+
+        // var a=5
+        // while(a==5){
+        //     console.log("Hello",a);
+        // }
 
     </script>
 </body>

@@ -1,0 +1,37 @@
+/* Global Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tag Selector */
+h1{
+    color: red;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    font-weight: bold;
+}
+/* ID Selector */
+#name{
+    width: 200px;
+    height: 30px;
+}
+#btn{
+    width: 100px;
+    height: 30px;
+    /* margin-top: 20px; */
+    margin: 10px 100px;
+    border-radius: 10px;
+}
+/* Class Selector */
+.pass{
+    width: 200px;
+    height: 30px;
+}

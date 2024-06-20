@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color: #FFB1B1;
+        }
+        .logo{
+            margin: 10px 25px;
+            color: #102C57;
+        }
+        nav{
+            display: flex;
+        }
+        nav ul{
+            display: flex;
+            margin: 20px 40px;
+        }
+        nav ul li a{
+            margin: 0px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+        }
+        nav ul li a:hover{
+            color: black;
+        }
+        main-section{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            background-color: #F7F9F2;
+            color: #102C57;
+        }
+        .text{
+            max-width: 500px;
+            border: 2px solid black;
+            padding: 20px 20px;
+            /* border-radius: 12px; */
+        }
+        .form-section{
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #102C57;
+            color: white;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 40px;
+            margin-left: 140px;
+           
+        }
+        .input label{
+            margin-left: 8px;
+        }
+        .input input{
+            width: 300px;
+            height: 30px;
+            margin: 6px 0px;
+            padding-left: 15px;
+            border-radius: 5px;
+           
+        }
+        input[type=submit]{
+            width: 150px;
+            height: 30px;
+            margin-top: 32px;
+            margin-left: 90px;
+            border: 2px solid white;
+            /* border-radius: 12px; */
+            background-color: #1679AB;
+            color: white;
+            border: none;
+            font-weight: bolder;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>Logo</h1></div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Service</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main-section>
+        <div class=" text text1">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex modi quas commodi quis qui, necessitatibus error libero eum dolor deleniti culpa, atque porro adipisci consequatur quasi facilis aperiam saepe cumque voluptatem nobis alias voluptatum ipsam. Sed id nihil unde aliquid iusto. Enim eveniet a cumque, libero asperiores vitae? Possimus inventore quos magnam magni! Reprehenderit quas, ullam minima omnis numquam veritatis corporis laborum, consequuntur unde enim porro praesentium dolores aut esse dignissimos qui pariatur, corrupti animi vitae in. Tempore illum aliquid mollitia at nostrum molestiae dolor corporis fugiat dolorum perspiciatis, praesentium eum maiores debitis nemo ad! Dignissimos perspiciatis est officia! ipsum dolor sit amet consectetur adipisicing elit. Harum, reiciendis ad. Soluta delectus Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cumque quasi vitae totam aliquid nulla voluptatum , reiciendis quo accusamus harum quas doloremque debitis dignissimos nemo laborum officia ea inventore. Labore, minima perferendis! Vel incidunt laborum earum consequunnobis. Iste ipsam aliquid vero eum sed vitae, quia ad veritatis tenetur nulla! Inventore, culpa voluptas rerum molestiae aliquid sint illo reprehenderit atque eos impedit, praesentium voluptatem, officia dolore a explicabo ratione perferendis.</div>
+        <div class="text text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias recusandae ipsam est ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ad voluptatibus soluta vero similique suscipit est fugit! Itaque labore ex sunt incidunt nesciunt quo ab. Alias, quaerat illum officia ab non aut anditiis similique? Amet, velit fuga nihil ullam solunecessitatibus ea, vitae culpa mollitia saepe voluptas illo ab sapiente adipisci sequi, inventore corporis veniam tenetur ipsum ullam enim cum architecto eveniet, commodi explicabo nihil impedit? Aliquam, neque laborum alias natus quae, eius asperiores molestiae harum minima, voluptatibus esse optio quo. repellat cumque ullam veritatis illum dolorum adipisci mollitia consectetur? Numquam dolores itaque rem nesciunt excepturi quaerat, recusandae odit fuga unde esse. Perferendis voluptates cupiditate ducimus culpa autem ipsam deserunt fugit quam, fugiat atque illo vel. Fugit iste incidunt voluptas, omnis quod aut esse itaque iure perspiciatis, voluptatibus ea eos ratione delectus eum saepe eligendi repudiandae a doloribus nisi quidem, beatae odio mollitia. Adipisci harum eligendi temporibus nam vitae repudiandae quia eos saepe blanditiis voluptas dignissimos minus deserunt ea laboriosam aliquam eveniet assumenda velit porro tempore, illo facilis.</div>
+    </main-section>
+    <form action="assets/style.css" class="form-section" method="post">
+        
+        <div class="input input-text">
+            
+
+                <label for="name">Username or email address</label>
+            
+            <input type="text" id="name" name="name">
+        </div>
+        <div class=" input input-pass">
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="password" required>
+        </div>
+        <input type="submit"  value="Submit">
+    </form>
+</body>
+</html>

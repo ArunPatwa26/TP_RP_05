@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
-    <h1>login</h1>
     <form action="index.php" method="post">
+        <h1>login</h1>
         <div>
 
             <label for="name">Username:</label>
-            <input type="text" id="name" name="username"/>
+            <input type="text" id="name" name="username" required/>
         </div>
         <br>
         <div>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" class="pass" name="password"/>
+            <input type="password" id="password" class="pass" name="password" required/>
         </div>
-        <input type="submit"/>
+        <input type="submit" id="btn"/>
     </form>
     
 </body> 
